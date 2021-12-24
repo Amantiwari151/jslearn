@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String</title>
+    <style>
+        .mytb{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydata"></div>
+    <button onclick="fun()">click</button>
+    <script>
+        var students = [
+            {
+                name: "Ram",
+                email: "Ram@gmail.com",
+                age: 35
+            }
+            , {
+                name: "Ram charan",
+                email: "Ramcharan@gmail.com",
+                age: 35
+            }
+            , {
+                name: "Ram prasad",
+                email: "Ramprasad@gmail.com",
+                age: 35
+            }
+            , {
+                name: "Ram lal",
+                email: "Ramlal@gmail.com",
+                age: 35
+            }
+            , {
+                name: "Rameshwar",
+                email: "Rameshwar@gmail.com",
+                age: 35
+            }
+        ]
+        var tbl = `<table class="mytb">`;
+        students.forEach((s) => {
+            tbl += `<tr>
+                                    <td>${s.name}</td>
+                                    <td>${s.email}</td>
+                                    <td>${s.age}</td>
+                                </tr>`
+        })
+        tbl += `</table>`
+        document.getElementById('mydata').innerHTML = tbl;
+    </script>
+</body>
+</html>
